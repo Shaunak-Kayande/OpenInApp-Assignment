@@ -1,20 +1,4 @@
 {
-    "revenues": {
-        "total": "$3,166,430",
-        "gain": "+3.9%"
-    },
-    "transactions": {
-        "total": "1,707",
-        "gain": "+0.9%"
-    },
-    "likes": {
-        "total": "8,859",
-        "gain": "+4.6%"
-    },
-    "users": {
-        "total": "11,488",
-        "gain": "+9.5%"
-    },
     "activities": [
         {
             "user": "480",
@@ -32,10 +16,5 @@
             "user": "370",
             "guest": "420"
         }
-    ],
-    "top-products": {
-        "Basic Tees": "47",
-        "Custom Short Pants": "36",
-        "Super Hoodies": "17"
-    }
+    ]
 }
