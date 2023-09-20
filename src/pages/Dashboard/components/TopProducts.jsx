@@ -1,9 +1,19 @@
 import React, { useEffect, useState } from "react";
+import { fetchTopProductsData } from "../../../setup/api/topProductsData";
 
 const TopProducts = () => {
-  const green = 55;
-  const red = 14;
-  const yellow = 31;
+  const [topProductsData, setTopProductsData] = useState({});
+
+  useEffect(() => {
+    // Fetch top products data when the component mounts
+    fetchTopProductsData()
+      .then((data) => setTopProductsData(data))
+      .catch((error) => console.error(error));
+  }, []);
+
+  const green = topProductsData["Basic Tees"];
+  const red = topProductsData["Super Hoodies"];
+  const yellow = topProductsData["Custom Short Pants"];
 
   const r = 3.6 * red;
   const y = 3.6 * red + 3.6 * yellow;
@@ -74,7 +84,9 @@ const TopProducts = () => {
             <div className="text-sm font-['Montserrat'] font-bold">
               Basic Tees
             </div>
-            <div className="text-xs font-['Lato'] text-[#858585]">55%</div>
+            <div className="text-xs font-['Lato'] text-[#858585]">
+              {topProductsData["Basic Tees"]}%
+            </div>
           </div>
         </div>
 
@@ -88,7 +100,9 @@ const TopProducts = () => {
             <div className="text-sm font-['Montserrat'] font-bold">
               Custom Short Pants
             </div>
-            <div className="text-xs font-['Lato'] text-[#858585]">31%</div>
+            <div className="text-xs font-['Lato'] text-[#858585]">
+              {topProductsData["Custom Short Pants"]}%
+            </div>
           </div>
         </div>
 
@@ -102,7 +116,9 @@ const TopProducts = () => {
             <div className="text-sm font-['Montserrat'] font-bold">
               Super Hoodies
             </div>
-            <div className="text-xs font-['Lato'] text-[#858585]">14%</div>
+            <div className="text-xs font-['Lato'] text-[#858585]">
+              {topProductsData["Super Hoodies"]}%
+            </div>
           </div>
         </div>
       </div>

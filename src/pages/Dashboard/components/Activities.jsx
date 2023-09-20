@@ -1,12 +1,23 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+import { fetchActivityData } from "../../../setup/api/activityData";
 
 const Activities = () => {
-  const activitiesArr = [
-    { user: 500, guest: 400 },
-    { user: 360, guest: 450 },
-    { user: 300, guest: 400 },
-    { user: 405, guest: 340 },
-  ];
+  const [activityData, setActivityData] = useState([]);
+
+  useEffect(() => {
+    // Fetch activity data when the component mounts
+    fetchActivityData()
+      .then((data) => setActivityData(data))
+      .catch((error) => console.error(error));
+  }, []);
+
+  // const activityArr = [
+  //   { user: 500, guest: 400 },
+  //   { user: 360, guest: 450 },
+  //   { user: 300, guest: 400 },
+  //   { user: 405, guest: 340 },
+  // ];
+  // console.log(activityData);
 
   return (
     <div
@@ -77,56 +88,60 @@ const Activities = () => {
                   id="Line5"
                 />
               </div>
-              <div className="flex items-end justify-around w-full z-20">
-                <div className="flex items-end space-x-2">
-                  <div
-                    className="w-10 h-32 bg-[#98D89E] rounded-md "
-                    id="w1-u"
-                    style={{ height: activitiesArr[0].user * 0.416 }}
-                  ></div>
-                  <div
-                    className="w-10 h-32 bg-[#EE8484] rounded-md"
-                    id="w1-g"
-                    style={{ height: activitiesArr[0].guest * 0.416 }}
-                  ></div>
+              {activityData.length === 0 ? (
+                ""
+              ) : (
+                <div className="flex items-end justify-around w-full z-20">
+                  <div className="flex items-end space-x-2">
+                    <div
+                      className="w-10 h-32 bg-[#98D89E] rounded-md "
+                      id="w1-u"
+                      style={{ height: activityData[0].user * 0.416 }}
+                    ></div>
+                    <div
+                      className="w-10 h-32 bg-[#EE8484] rounded-md"
+                      id="w1-g"
+                      style={{ height: activityData[0].guest * 0.416 }}
+                    ></div>
+                  </div>
+                  <div className="flex items-end space-x-2">
+                    <div
+                      className="w-10 h-32 bg-[#98D89E] rounded-md "
+                      id="w2-u"
+                      style={{ height: activityData[1].user * 0.416 }}
+                    ></div>
+                    <div
+                      className="w-10 h-32 bg-[#EE8484] rounded-md"
+                      id="w2-g"
+                      style={{ height: activityData[1].guest * 0.416 }}
+                    ></div>
+                  </div>
+                  <div className="flex items-end space-x-2">
+                    <div
+                      className="w-10 h-32 bg-[#98D89E] rounded-md "
+                      id="w3-u"
+                      style={{ height: activityData[2].user * 0.416 }}
+                    ></div>
+                    <div
+                      className="w-10 h-32 bg-[#EE8484] rounded-md"
+                      id="w3-g"
+                      style={{ height: activityData[2].guest * 0.416 }}
+                    ></div>
+                  </div>
+                  <div className="flex items-end space-x-2">
+                    <div
+                      className="w-10 h-32 bg-[#98D89E] rounded-md "
+                      id="w4-u"
+                      style={{ height: activityData[3].user * 0.416 }}
+                    ></div>
+                    <div
+                      className="w-10 h-32 bg-[#EE8484] rounded-md"
+                      id="w4-g"
+                      style={{ height: activityData[3].guest * 0.416 }}
+                    ></div>
+                  </div>
                 </div>
-                <div className="flex items-end space-x-2">
-                  <div
-                    className="w-10 h-32 bg-[#98D89E] rounded-md "
-                    id="w2-u"
-                    style={{ height: activitiesArr[1].user * 0.416 }}
-                  ></div>
-                  <div
-                    className="w-10 h-32 bg-[#EE8484] rounded-md"
-                    id="w2-g"
-                    style={{ height: activitiesArr[1].guest * 0.416 }}
-                  ></div>
-                </div>
-                <div className="flex items-end space-x-2">
-                  <div
-                    className="w-10 h-32 bg-[#98D89E] rounded-md "
-                    id="w3-u"
-                    style={{ height: activitiesArr[2].user * 0.416 }}
-                  ></div>
-                  <div
-                    className="w-10 h-32 bg-[#EE8484] rounded-md"
-                    id="w3-g"
-                    style={{ height: activitiesArr[0].guest * 0.416 }}
-                  ></div>
-                </div>
-                <div className="flex items-end space-x-2">
-                  <div
-                    className="w-10 h-32 bg-[#98D89E] rounded-md "
-                    id="w4-u"
-                    style={{ height: activitiesArr[3].user * 0.416 }}
-                  ></div>
-                  <div
-                    className="w-10 h-32 bg-[#EE8484] rounded-md"
-                    id="w4-g"
-                    style={{ height: activitiesArr[3].guest * 0.416 }}
-                  ></div>
-                </div>
-              </div>
+              )}
             </div>
             <div className="flex justify-around w-full ">
               <div className="text-sm font-['Lato'] text-[#858585]">Week 1</div>
