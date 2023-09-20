@@ -1,0 +1,22 @@
+#outer-circle {
+  height: 141.9px;
+  width: 141.9px;
+  background-color: red;
+  /* background-image: conic-gradient(
+    from 95deg,
+    #ee8484 0deg,
+    #ee8484 90deg,
+    #f6dc7d 90deg,
+    #f6dc7d 180deg,
+    #98d89e 180deg,
+    #98d89e 270deg
+  ); */
+  border-radius: 50%;
+}
+
+#inner-circle {
+  height: 110px;
+  width: 110px;
+  background-color: white;
+  border-radius: 50%;
+}
