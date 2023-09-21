@@ -28,6 +28,10 @@
   grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
 }
 
+#HomeLeftSide {
+  background-image: url(./left-side.png);
+}
+
 @media (max-width: 700px) {
   /* #LeftSide {
     display: none;

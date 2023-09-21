@@ -3,8 +3,8 @@ import React from "react";
 const LeftSide = () => {
   return (
     <div
-      className="bg-[url(./left-side.png)] bg-cover bg-right-bottom self-start justify-between items-start flex flex-col w-1/3 lg:w-1/2 h-full md:pl-5 lg:pl-20 py-16"
-      id="LeftSide"
+      className=" bg-cover bg-right-bottom self-start justify-between items-start flex flex-col w-1/3 lg:w-1/2 h-full md:pl-5 lg:pl-20 py-16"
+      id="HomeLeftSide"
     >
       <div className="text-base px-10 md:px-0 md:text-2xl font-['Poppins'] font-bold tracking-[0.36] leading-[29.4px] text-white mb-5">
         LOGO
