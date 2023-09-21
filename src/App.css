@@ -29,11 +29,11 @@
 }
 
 #HomeLeftSide {
-  background-image: linear-gradient(100deg, #4285f4 80%, #ffffff 20%);
+  background-image: linear-gradient(100deg, #4285f4 80%, #f8faff 20%);
 }
 @media (max-width: 1030px) {
   #HomeLeftSide {
-    background-image: linear-gradient(92deg, #4285f4 80%, #ffffff 20%);
+    background-image: linear-gradient(92deg, #4285f4 80%, #f8faff 20%);
   }
 }
 @media (max-width: 700px) {
