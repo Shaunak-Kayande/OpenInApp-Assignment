@@ -2,12 +2,19 @@ import React from "react";
 
 const RightSide = () => {
   return (
-    <div className="flex flex-col gap-2 items-start">
-      <div className="text-4xl font-['Montserrat'] font-bold">Sign In</div>
-      <div className="font-['Lato'] mb-5">Sign in to your account</div>
-      <div className="flex flex-row mb-4 gap-6 w-full items-start">
+    <div
+      className="flex flex-col md:gap-2 items-center lg:items-start overflow-hidden"
+      id="signin"
+    >
+      <div className="text-2xl md:text-4xl font-['Montserrat'] font-bold">
+        Sign In
+      </div>
+      <div className="text-sm md:text-base font-['Lato'] mb-5">
+        Sign in to your account
+      </div>
+      <div className="flex flex-col md:flex-row mb-2 gap-2 md:mb-4 md:gap-6 w-full sm:w-1/2 md:w-full items-center justify-center md:items-start">
         <div
-          className="bg-white flex flex-row gap-3 w-1/2 h-8 items-center px-5"
+          className="bg-white flex flex-row items-center justify-center gap-3 w-full md:w-1/2 h-8 px-5"
           id="White"
         >
           <img
@@ -20,7 +27,7 @@ const RightSide = () => {
           </div>
         </div>
         <div
-          className="bg-white flex flex-row gap-3 w-1/2 h-8 items-center px-5"
+          className="bg-white flex flex-row items-center justify-center gap-3 w-full md:w-1/2 h-8 px-5"
           id="White1"
         >
           <img src="./apple-icon.svg" className="w-3 shrink-0" id="Apple" />
@@ -30,38 +37,46 @@ const RightSide = () => {
         </div>
       </div>
       <div
-        className="bg-white flex flex-col mb-3 gap-3 w-[423px] h-[348px] shrink-0 items-start p-8 rounded-[20px]"
+        className="bg-white flex flex-col mb-2 gap-2 md:mb-3 md:gap-3 w-[250px] md:w-[423px] md:h-[348px] shrink-0 items-start p-4 md:p-8 rounded-[20px]"
         id="Card"
       >
-        <div className="font-['Lato']">Email address</div>
+        <div className="text-sm md:text-base font-['Lato']">Email address</div>
         <div
-          className="bg-[#f5f5f5] self-stretch flex flex-col justify-center mb-2 pl-4 h-10 shrink-0 items-start rounded-lg"
+          className="bg-[#f5f5f5] self-stretch flex flex-col justify-center mb-2 pl-4 h-8 md:h-10 shrink-0 items-start rounded-lg"
           id="InputField"
         >
-          <div className="font-['Lato']">johndoe@gmail.com</div>
+          <input
+            type="text"
+            className="text-xs md:text-base font-['Lato'] outline-none bg-[#f5f5f5]"
+            placeholder="johndoe@gmail.com"
+          />
         </div>
-        <div className="font-['Lato']">Password</div>
+        <div className="text-sm md:text-base font-['Lato']">Password</div>
         <div
-          className="bg-[#eaeaea] self-stretch flex flex-col justify-center mb-2 pl-4 h-10 shrink-0 items-start rounded-lg"
+          className="bg-[#eaeaea] self-stretch flex flex-col justify-center mb-2 pl-4 h-8 md:h-10 shrink-0 items-start rounded-lg"
           id="Input"
         >
-          <div className="font-['Lato']">••••••••</div>
+          <input
+            type="password"
+            className="text-xs md:text-base font-['Lato'] outline-none bg-[#eaeaea]"
+            placeholder="••••••••"
+          />
         </div>
-        <div className="font-['Lato'] text-[#346bd4] mb-3 ml-px">
+        <div className="font-['Lato'] text-sm md:text-base text-[#346bd4] mb-3 ml-px">
           Forgot password?
         </div>
 
         <button
-          className="bg-[#4285f4] flex w-full h-10 shrink-0 items-center justify-center py-2 rounded-lg"
+          className="bg-[#4285f4] flex w-full h-8 md:h-10 shrink-0 items-center justify-center py-2 rounded-lg"
           id="ButtonPrimary"
         >
-          <div className="text-center font-['Montserrat'] font-bold text-white">
+          <div className="text-center text-sm md:text-base font-['Montserrat'] font-bold text-white">
             Sign In
           </div>
         </button>
       </div>
-      <div className="text-center font-['Lato'] text-[#858585] ml-16">
-        Don’t have an account?{" "}
+      <div className="text-center text-sm md:text-base justify-center flex flex-col font-['Lato'] text-[#858585]">
+        <div>Don’t have an account?</div>
         <div className="text-[#346bd4] contents">Register here</div>
       </div>
     </div>

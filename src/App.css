@@ -1,7 +1,7 @@
 #outer-circle {
   height: 141.9px;
   width: 141.9px;
-  background-color: red;
+  background-color: #ee8484;
   /* background-image: conic-gradient(
     from 95deg,
     #ee8484 0deg,
@@ -19,4 +19,40 @@
   width: 110px;
   background-color: white;
   border-radius: 50%;
+}
+
+#dashboard-center {
+  width: 100%;
+  display: grid;
+  gap: 5px;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+}
+
+@media (max-width: 700px) {
+  /* #LeftSide {
+    display: none;
+  } */
+  #dashboard-center {
+    grid-template-columns: 2;
+    /* scale: 80%; */
+    /* font-size: xx-small; */
+  }
+  /* #Activities {
+    transform: scale(0.9, 0.5);
+  } */
+  #barchart {
+    /* transform: scale(0.9, 0.9); */
+  }
+  #add-new-profile {
+    transform: scale(0.8, 0.8);
+  }
+}
+
+@media (max-width: 400px) {
+  #barchart {
+    /* transform: scale(1, 0.5); */
+  }
+  #signin {
+    /* transform: scale(0.5, 0.5); */
+  }
 }

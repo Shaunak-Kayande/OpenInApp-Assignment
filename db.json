@@ -39,5 +39,10 @@
         "Basic Tees": "12",
         "Custom Short Pants": "40",
         "Super Hoodies": "38"
+    },
+    "users": {
+        "user1": "password1",
+        "user2": "password2",
+        "userxyz": "qwerty"
     }
 }

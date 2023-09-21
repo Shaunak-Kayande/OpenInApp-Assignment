@@ -21,10 +21,10 @@ const Activities = () => {
 
   return (
     <div
-      className="border-solid border-[#e0e0e0] shadow-[4px_4px_20px_0px_rgba(0,_0,_0,_0.1)] bg-white flex flex-col justify-center gap-8 pt-8 pb-6 px-8 border-2 rounded-[20px]"
-      id="Card4"
+      className="border-solid border-[#e0e0e0] shadow-[4px_4px_20px_0px_rgba(0,_0,_0,_0.1)] bg-white flex flex-col justify-center space-y-8 pt-8 pb-12 px-8  rounded-[20px]"
+      id="Activities"
     >
-      <div className="flex flex-row justify-between items-start ml-2 mr-8">
+      <div className="flex flex-row justify-between items-start md:ml-2 md:mr-8 ">
         <div className="flex flex-col gap-1 items-start">
           <div className="text-lg font-['Montserrat'] font-bold">
             Activities
@@ -50,8 +50,14 @@ const Activities = () => {
           </div>
         </div>
       </div>
-      <div className="flex flex-row ml-2 gap-4 items-start">
-        <div className="flex flex-col justify-between w-6 shrink-0 h-[212px] items-start">
+      <div
+        className="flex flex-row md:ml-2 md:gap-4 items-start justify-start w-full h-full "
+        id="barchart"
+      >
+        <div
+          className="flex flex-col justify-between w-6 shrink-0 h-[212px] items-start"
+          id="rows"
+        >
           <div className="text-sm font-['Lato'] text-[#858585]">500</div>
           <div className="text-sm font-['Lato'] text-[#858585]">400</div>
           <div className="text-sm font-['Lato'] text-[#858585]">300</div>
@@ -59,32 +65,35 @@ const Activities = () => {
           <div className="text-sm font-['Lato'] text-[#858585]">100</div>
           <div className="text-sm font-['Lato'] text-[#858585] self-end">0</div>
         </div>
-        <div className="flex flex-row mt-2 gap-1 w-[890px] items-start">
-          <div className="flex flex-col gap-1 w-[881px]">
+        <div className="flex flex-row mt-2 gap-1 w-full items-start" id="">
+          <div
+            className="flex flex-col gap-1 w-full md:  h-[208px]"
+            id="barchat-inner"
+          >
             <div className="relative flex flex-col justify-end items-end pt-20 h-52 ">
               <div className="absolute z-10 inset-0 flex flex-col justify-between">
                 <div
-                  className="border-solid border-[#eaeaea] w-[881px] h-px border-t border-b-0 border-x-0"
+                  className="border-solid border-[#eaeaea]  h-px border-t border-b-0 border-x-0"
                   id="Line"
                 />
                 <div
-                  className="border-solid border-[#eaeaea] w-[881px] h-px border-t border-b-0 border-x-0"
+                  className="border-solid border-[#eaeaea]  h-px border-t border-b-0 border-x-0"
                   id="Line1"
                 />
                 <div
-                  className="border-solid border-[#eaeaea] w-[881px] h-px border-t border-b-0 border-x-0"
+                  className="border-solid border-[#eaeaea]  h-px border-t border-b-0 border-x-0"
                   id="Line2"
                 />
                 <div
-                  className="border-solid border-[#eaeaea] w-[881px] h-px border-t border-b-0 border-x-0"
+                  className="border-solid border-[#eaeaea]  h-px border-t border-b-0 border-x-0"
                   id="Line3"
                 />
                 <div
-                  className="border-solid border-[#eaeaea] w-[881px] h-px border-t border-b-0 border-x-0"
+                  className="border-solid border-[#eaeaea]  h-px border-t border-b-0 border-x-0"
                   id="Line4"
                 />
                 <div
-                  className="border-solid border-[#eaeaea] w-[881px] h-px border-t border-b-0 border-x-0"
+                  className="border-solid border-[#eaeaea]  h-px border-t border-b-0 border-x-0"
                   id="Line5"
                 />
               </div>
@@ -92,50 +101,50 @@ const Activities = () => {
                 ""
               ) : (
                 <div className="flex items-end justify-around w-full z-20">
-                  <div className="flex items-end space-x-2">
+                  <div className="flex items-end space-x-1 md:space-x-2">
                     <div
-                      className="w-10 h-32 bg-[#98D89E] rounded-md "
+                      className="w-5 md:w-10 h-32 bg-[#98D89E] rounded-md "
                       id="w1-u"
                       style={{ height: activityData[0].user * 0.416 }}
                     ></div>
                     <div
-                      className="w-10 h-32 bg-[#EE8484] rounded-md"
+                      className="w-5 md:w-10 h-32 bg-[#EE8484] rounded-md"
                       id="w1-g"
                       style={{ height: activityData[0].guest * 0.416 }}
                     ></div>
                   </div>
-                  <div className="flex items-end space-x-2">
+                  <div className="flex items-end space-x-1 md:space-x-2">
                     <div
-                      className="w-10 h-32 bg-[#98D89E] rounded-md "
+                      className="w-5 md:w-10 h-32 bg-[#98D89E] rounded-md "
                       id="w2-u"
                       style={{ height: activityData[1].user * 0.416 }}
                     ></div>
                     <div
-                      className="w-10 h-32 bg-[#EE8484] rounded-md"
+                      className="w-5 md:w-10 h-32 bg-[#EE8484] rounded-md"
                       id="w2-g"
                       style={{ height: activityData[1].guest * 0.416 }}
                     ></div>
                   </div>
-                  <div className="flex items-end space-x-2">
+                  <div className="flex items-end space-x-1 md:space-x-2">
                     <div
-                      className="w-10 h-32 bg-[#98D89E] rounded-md "
+                      className="w-5 md:w-10 h-32 bg-[#98D89E] rounded-md "
                       id="w3-u"
                       style={{ height: activityData[2].user * 0.416 }}
                     ></div>
                     <div
-                      className="w-10 h-32 bg-[#EE8484] rounded-md"
+                      className="w-5 md:w-10 h-32 bg-[#EE8484] rounded-md"
                       id="w3-g"
                       style={{ height: activityData[2].guest * 0.416 }}
                     ></div>
                   </div>
-                  <div className="flex items-end space-x-2">
+                  <div className="flex items-end space-x-1 md:space-x-2">
                     <div
-                      className="w-10 h-32 bg-[#98D89E] rounded-md "
+                      className="w-5 md:w-10 h-32 bg-[#98D89E] rounded-md "
                       id="w4-u"
                       style={{ height: activityData[3].user * 0.416 }}
                     ></div>
                     <div
-                      className="w-10 h-32 bg-[#EE8484] rounded-md"
+                      className="w-5 md:w-10 h-32 bg-[#EE8484] rounded-md"
                       id="w4-g"
                       style={{ height: activityData[3].guest * 0.416 }}
                     ></div>

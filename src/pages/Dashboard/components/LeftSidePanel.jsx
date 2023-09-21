@@ -3,10 +3,10 @@ import React from "react";
 const LeftSidePanel = () => {
   return (
     <div
-      className="bg-[linear-gradient(180deg,_#4285f4_0%,#3c83f9_100%)] bg-cover bg-50%_50% bg-blend-normal bg-no-repeat flex flex-col justify-between h-[944px] items-start my-10 pl-12 py-16 rounded-[20px]"
+      className="bg-[linear-gradient(180deg,_#4285f4_0%,#3c83f9_100%)] bg-cover bg-50%_50% bg-blend-normal bg-no-repeat hidden xl:flex flex-col justify-between h-[140vh] items-start my-10 pl-12 py-16 rounded-[20px]"
       id="LeftSide"
     >
-      <div className="flex flex-col mr-20 gap-10 w-40 h-[374px] shrink-0">
+      <div className="flex flex-col mr-20 gap-10 w-[12vw] h-[36vh] shrink-0">
         <div className="text-4xl font-['Montserrat'] font-bold text-white self-start mb-5 ml-px">
           Board.
         </div>
