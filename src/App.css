@@ -29,9 +29,13 @@
 }
 
 #HomeLeftSide {
-  background-image: url(./left-side.png);
+  background-image: linear-gradient(100deg, #4285f4 80%, #ffffff 20%);
 }
-
+@media (max-width: 1030px) {
+  #HomeLeftSide {
+    background-image: linear-gradient(92deg, #4285f4 80%, #ffffff 20%);
+  }
+}
 @media (max-width: 700px) {
   /* #LeftSide {
     display: none;

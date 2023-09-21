@@ -25,7 +25,7 @@ const RightSide = () => {
       <div className="text-sm md:text-base font-['Lato'] mb-5">
         Sign in to your account
       </div>
-      <div className="flex flex-col md:flex-row mb-2 gap-2 md:mb-4 md:gap-6 w-full sm:w-1/2 md:w-full items-center justify-center md:items-start">
+      <div className="flex flex-col md:flex-row mb-2 gap-2 md:mb-4 md:gap-6 w-full  items-center justify-center md:items-start">
         <div
           className="bg-white flex flex-row items-center justify-center gap-3 w-full md:w-1/2 h-8 px-5"
           id="White"
