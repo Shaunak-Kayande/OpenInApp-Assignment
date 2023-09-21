@@ -1,6 +1,19 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+import { fetchUsersData } from "../../../setup/api/userData";
+import { Link } from "react-router-dom";
 
 const RightSide = () => {
+  const [usersData, setUsersData] = useState([]);
+
+  useEffect(() => {
+    fetchUsersData()
+      .then((data) => setUsersData(data))
+      .catch((error) => console.error(error));
+  }, []);
+
+  const [userName, setUserName] = useState("");
+  const [password, setPassword] = useState("");
+
   return (
     <div
       className="flex flex-col md:gap-2 items-center lg:items-start overflow-hidden"
@@ -49,6 +62,9 @@ const RightSide = () => {
             type="text"
             className="text-xs md:text-base font-['Lato'] outline-none bg-[#f5f5f5]"
             placeholder="johndoe@gmail.com"
+            onChange={(e) => {
+              setUserName(e.target.value);
+            }}
           />
         </div>
         <div className="text-sm md:text-base font-['Lato']">Password</div>
@@ -60,22 +76,26 @@ const RightSide = () => {
             type="password"
             className="text-xs md:text-base font-['Lato'] outline-none bg-[#eaeaea]"
             placeholder="••••••••"
+            onChange={(e) => {
+              setPassword(e.target.value);
+            }}
           />
         </div>
         <div className="font-['Lato'] text-sm md:text-base text-[#346bd4] mb-3 ml-px">
           Forgot password?
         </div>
 
-        <button
+        <Link
           className="bg-[#4285f4] flex w-full h-8 md:h-10 shrink-0 items-center justify-center py-2 rounded-lg"
           id="ButtonPrimary"
+          to={usersData[userName] === password ? "dashboard" : ""}
         >
           <div className="text-center text-sm md:text-base font-['Montserrat'] font-bold text-white">
             Sign In
           </div>
-        </button>
+        </Link>
       </div>
-      <div className="text-center text-sm md:text-base justify-center flex flex-col font-['Lato'] text-[#858585]">
+      <div className="text-center md:self-center text-sm md:text-base justify-center flex flex-col font-['Lato'] text-[#858585]">
         <div>Don’t have an account?</div>
         <div className="text-[#346bd4] contents">Register here</div>
       </div>
