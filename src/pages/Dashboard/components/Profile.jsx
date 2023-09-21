@@ -1,7 +1,5 @@
 import React, { useEffect, useState } from "react";
 import AddNewProfile from "../NewProfile/AddNewProfile";
-import { createBrowserHistory } from "history";
-import qs from "qs";
 import { useSearchParams } from "react-router-dom";
 
 const AddProfile = () => {
